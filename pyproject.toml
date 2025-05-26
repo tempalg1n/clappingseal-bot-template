@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "bot-template"
+version = "0.1.0"
+description = "My bot template May 2025"
+authors = ["tempalgin <ivanmuranov595@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+aiogram = "3.20.0.post0"
+python-dotenv = "^1.1.0"
+sqlalchemy = "^2.0.40"
+greenlet = "^3.2.1"
+asyncpg = "^0.30.0"
+alembic = "^1.15.2"
+redis = "^5.2.1"
+dishka = "^1.5.3"
+structlog = "^25.3.0"
+black = "^25.1.0"
+ruff = "^0.11.7"
+mypy = "^1.15.0"
+isort = "^6.0.1"
+faststream = "^0.5.39"
+aio-pika = "^9.5.5"
+taskiq-aio-pika = "^0.4.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

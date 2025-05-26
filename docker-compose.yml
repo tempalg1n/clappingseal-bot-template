@@ -1,0 +1,14 @@
+services:
+  bot:
+    build:
+      context: .
+      dockerfile: buildfiles/Dockerfile
+    env_file:
+      - .env
+    restart: always
+    networks:
+      - template
+
+networks:
+  template:
+    external: true
