@@ -8,16 +8,13 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from ..models import Base
 
-AbstractModel = TypeVar('AbstractModel')
+AbstractModel = TypeVar('AbstractModel', bound=Base)
 
 
 class Repository(Generic[AbstractModel]):
     """Repository abstract class."""
 
-    type_model: type[Base]
-    session: AsyncSession
-
-    def __init__(self, type_model: type[Base], session: AsyncSession):
+    def __init__(self, type_model: type[AbstractModel], session: AsyncSession):
         """Initialize abstract repository class.
 
         :param type_model: Which model will be used for operations
